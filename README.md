@@ -35,13 +35,11 @@ View (MainActivity) ➡️ ViewModel ➡️ Repository ➡️ Retrofit Service �
 ## 🖼️ Diagrams
 
 ### Sequence Diagram
-![Sequence Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/sequence-diagram.jpeg)
+![Sequence Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/sequence-diagram.png)
 
 ### Flow Diagram
-![Flow Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/flow-diagram-2.jpeg)
+![Flow Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/sequence-diagram-2.png)
 
-### Architecture Overview
-![Architecture](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/architecture.jpeg)
 
 ---
 
