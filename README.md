@@ -35,6 +35,15 @@ View (MainActivity) ➡️ ViewModel ➡️ Repository ➡️ Retrofit Service �
 ## 🖼️ Diagrams
 
 ### Sequence Diagram
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 ![Sequence Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/sequence-diagram.png)
 
 ### Flow Diagram
