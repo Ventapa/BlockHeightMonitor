@@ -35,10 +35,10 @@ View (MainActivity) ➡️ ViewModel ➡️ Repository ➡️ Retrofit Service �
 ## 🖼️ Diagrams
 
 ### Sequence Diagram
-![Sequence Diagram](https://raw.githubusercontent.com/YourUsername/BlockHeightMonitor/main/diagrams/sequence-diagram.png)
+![Sequence Diagram](https://raw.githubusercontent.com/YourUsername/BlockHeightMonitor/main/diagrams/sequence-diagram.jpeg)
 
 ### Flow Diagram
-![Flow Diagram](https://raw.githubusercontent.com/YourUsername/BlockHeightMonitor/main/diagrams/flow-diagram.png)
+![Flow Diagram](https://raw.githubusercontent.com/YourUsername/BlockHeightMonitor/main/diagrams/flow-diagram-2.jpeg)
 
 ### Architecture Overview
 ![Architecture](https://raw.githubusercontent.com/YourUsername/BlockHeightMonitor/main/diagrams/architecture.jpeg)
