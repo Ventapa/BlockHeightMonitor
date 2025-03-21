@@ -35,19 +35,44 @@ View (MainActivity) ➡️ ViewModel ➡️ Repository ➡️ Retrofit Service �
 ## 🖼️ Diagrams
 
 ### Sequence Diagram
-Here is a simple flow chart:
+
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+sequenceDiagram
+    participant User
+    participant MainActivity
+    participant BlockchainViewModel
+    participant BlockchainRepository
+    participant BlockstreamService
+
+    User->>MainActivity: Launch the App
+    MainActivity->>BlockchainViewModel: onCreate() -> getBlockHeight()
+    BlockchainViewModel->>BlockchainRepository: fetchBlockHeight(...)
+    BlockchainRepository->>BlockstreamService: getCurrentBlockHeight() via Retrofit
+    BlockstreamService-->>BlockchainRepository: Returns block height or error
+    BlockchainRepository-->>BlockchainViewModel: onResult(...)
+    BlockchainViewModel-->>MainActivity: Updates LiveData
+    MainActivity->>MainActivity: Observer triggers UI update
+
 ```
-![Sequence Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/sequence-diagram.png)
 
 ### Flow Diagram
-![Flow Diagram](https://raw.githubusercontent.com/Ventapa/BlockHeightMonitor/diagrams/sequence-diagram-2.png)
+```mermaid
+flowchart TB
+    A(("MainActivity\n(View)"))
+    B(("BlockchainViewModel\n(ViewModel)"))
+    C(("BlockchainRepository\n(Repository)"))
+    D(("BlockstreamService\n(Retrofit Interface)"))
+
+    A -->|"Observes LiveData\n& Calls getBlockHeight()"| B
+    B -->|"Delegates fetch\nto repository"| C
+    C -->|"Retrofit call\nfetchBlockHeight()"| D
+    D -->|"GET /blocks/tip/height\nReturns block height"| C
+    C -->|"Callback success/failure\nreturns data to VM"| B
+    B -->|"Post value to LiveData"| A
+    A -->|"UI automatically updated"| A
+
+```
 
 
 ---
